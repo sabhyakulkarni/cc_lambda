@@ -1,0 +1,11 @@
+# Dockerfile.node
+FROM node:16
+
+# Create a working directory
+WORKDIR /app
+
+# Copy the JavaScript file into the container
+COPY function.js .
+
+# Run the JavaScript function
+CMD ["node", "function.js"]
