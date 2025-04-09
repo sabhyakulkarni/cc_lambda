@@ -25,7 +25,7 @@ jobs:
           npm install
 
       - name: Build Python Docker image
-        run: docker build -f server/docker/Dockerfile.python -t python-func .
+        run: docker build -f C:\Users\Sabhya\.vscode\cc_project\cc_project\cc_lambda\server\docker\Dockerfile.python -t python-func C:\Users\Sabhya\.vscode\cc_project\cc_project\cc_lambda\server -t python-func .
 
       - name: Build JS Docker image
         run: docker build -f server/docker/Dockerfile.js -t js-func .
