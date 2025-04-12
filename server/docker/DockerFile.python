@@ -1,11 +1,17 @@
 # Dockerfile.python
-FROM python:3.9-slim
+FROM python:3.9-slim-bullseye
+
 
 # Create a working directory
 WORKDIR /app
 
 # Copy the Python file into the container
+
 COPY function.py . 
+
+COPY executions/function.py .
+
+
 
 # Run the Python function
 CMD ["python", "function.py"]
