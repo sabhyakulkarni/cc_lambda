@@ -23,12 +23,15 @@ jobs:
         run: |
           cd server
           npm install
-
+          
       - name: Build Python Docker image
-        run: docker build -f server/docker/DockerFile.python -t python-func .
+        run: docker build -f docker/DockerFile.python -t python-func .
+        working-directory: server
 
       - name: Build JS Docker image
-        run: docker build -f server/docker/DockerFile.js -t js-func .
+        run: docker build -f docker/DockerFile.js -t js-func .
+        working-directory: server
+
 
       - name: Run tests
         run: |
